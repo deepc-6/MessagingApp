@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="stylesheets/messages.css">
+</head>
+<body>
+    <div id="messages">
+        <ul id="messagesButtons">
+            <li data-ng-click="showInbox()">Inbox</li>
+            <li data-ng-click="showOutbox()">Outbox</li>
+        </ul>
+        <ul id="messagelist">
+            <li id="messagelistOuterLi" ng-repeat="message in messagelist track by $index">
+                <ul id="messagelistInnerUl">
+                    <li>Time: {{message.datetime | date: 'hh:mm:ss a, dd MMM yyyy'}}</li>
+                    <li>
+                        <span data-ng-if="message.to!=currentUserId">To: {{getUserNameById(message.to)}}</span>
+                    </li>
+                    <li>
+                        <span data-ng-if="message.from!=currentUserId">From: {{getUserNameById(message.from)}}</span>
+                    </li>
+                    <li>Message: {{message.message}}</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div id="users">
+        <ul>
+            <li>
+                <span class="bold">Username</span>
+                <span class="bold">E-mail</span>
+                <span></span>
+                <span></span>
+            </li>
+            <li ng-repeat="user in userlist track by $index">
+                <span>{{user.username}}</span>
+                <span>{{user.email}}</span>
+                <span><input id="inputSpan" type="text" placeholder="message" data-ng-model="user.messageInput" data-ng-if="user._id!=currentUserId" /></span>
+                <span><button class="btn btn-primary" data-ng-click="sendMessage(user._id)" data-ng-if="user._id!=currentUserId">Send</button></span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

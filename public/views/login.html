@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="stylesheets/login.css">
+</head>
+<body>
+    <div id="intro">
+        <div id="signup">
+            <h3>Sign Up</h3>
+            <form id="formAddUser">
+                <input type="text" placeholder="username" data-ng-model="registerUsername" />
+                <input type="text" placeholder="password" data-ng-model="registerPassword" />
+                <input type="text" placeholder="email" data-ng-model="registerEmail" />
+                <button type="submit" id="btnSubmit" data-ng-click="register()">Register</button>
+            </form>
+            <div class="alertDiv">
+                <p data-ng-if="showAlertExists">This name is already used ! Choose another one</p>
+                <p data-ng-if="showAlertEmpty">Fields cannot be empty</p>
+                <p data-ng-if="showAlertAddSuccess">User added successfully</p>
+            </div>
+        </div>
+        <div id="signin">
+            <h3>Sign In</h3>
+            <form id="formLoginUser">
+                <input type="text" placeholder="username" data-ng-model="loginUsername" />
+                <input type="text" placeholder="password" data-ng-model="loginPassword" />
+                <button class="btn btn-primary" data-ng-click="login()">Log In</button>
+            </form>
+            <div class="alertDiv">
+                <p data-ng-if="showAlertNoMatch">Username and password do not match</p>
+                <p data-ng-if="showAlertNoUser">No such user exists</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

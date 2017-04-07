@@ -1,0 +1,78 @@
+body {
+    min-width: 1000px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#messages {
+    min-width: 400px;
+    float: left;
+    padding: 20px;
+}
+
+#messagesButtons {
+    padding: 0;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+#messagesButtons li {
+    min-width: 200px;
+    background-color: cadetblue;
+    padding: 20px 0;
+    cursor: pointer;
+    text-align: center;
+    border-right: 1px solid white;
+}
+
+#messagelist {
+    padding: 0;
+}
+
+#messagelist li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    background-color: lightgray;
+}
+
+#messagelistOuterLi {
+    padding: 10px;
+}
+
+#messagelistInnerUl li {
+    margin: 0;
+}
+
+#users {
+    min-width: 500px;
+    float: right;
+}
+
+#users ul {
+    max-width: 800px;
+    background-color: lightgray;
+    padding: 10px;
+}
+
+#users li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+#users li span {
+    width: 100px;
+    text-align: center;
+}
+
+#users li span #inputSpan {
+    width: 130px;
+}
+
+.bold {
+    font-weight:bold;
+}
