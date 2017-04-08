@@ -26,6 +26,8 @@ A single-page messaging application using MEAN (MongoDB, Express.js, AngularJS, 
 7) Open a second console window, navigate to the project directory and run the project using:
 
    ```npm start```
+   
+8) Open a browser and go to ```localhost:3000```
 
 ### TODO:
 
@@ -37,7 +39,7 @@ A single-page messaging application using MEAN (MongoDB, Express.js, AngularJS, 
 
 4) <strike>Get all messages for current user from the database and implement inbox / outbox displays</strike>
 
-5) Store the current user id in local storage or cookies
+5) Store the current user id in local storage or cookies and handle back and refresh buttons for the browser
 
 6) Implement real-time updates of messages
 
